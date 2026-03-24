@@ -3,160 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apex AZM Global | الإمبراطورية الرقمية</title>
+    <title>Apex AZM Global | التميز الرقمي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Montserrat:wght@900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --gold: #d4af37;
+            --primary-gold: #D4AF37;
             --deep-blue: #001f3f;
-            --deep-purple: #240046;
-            --black: #000000;
+            --canva-purple: #7d2ae8;
+            --canva-blue: #00c4cc;
+            --glass-bg: rgba(255, 255, 255, 0.1);
         }
+
         body {
-            background: linear-gradient(135deg, var(--black) 0%, var(--deep-blue) 50%, var(--deep-purple) 100%);
+            background: linear-gradient(135deg, #050b18 0%, #0d1b3e 100%);
             color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Cairo', sans-serif;
             margin: 0;
             overflow-x: hidden;
+            line-height: 1.6;
         }
-        /* Header */
+
+        /* زخرفة الخلفية بأسلوب Canva */
+        body::before {
+            content: "";
+            position: fixed;
+            top: -10%;
+            left: -10%;
+            width: 40%;
+            height: 40%;
+            background: radial-gradient(circle, var(--canva-purple) 0%, transparent 70%);
+            filter: blur(80px);
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        /* الهيدر الاحترافي واسم الشركة */
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid var(--gold);
-        }
-        .logos { display: flex; gap: 10px; }
-        .logos img { width: 30px; filter: drop-shadow(0 0 5px var(--gold)); }
-        .menu-icon { font-size: 30px; color: var(--gold); cursor: pointer; }
-
-        /* Hero Section */
-        .hero {
-            padding: 100px 20px;
+            padding: 40px 20px;
             text-align: center;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
         }
-        .hero h1 {
+
+        .company-logo-main {
+            font-family: 'Montserrat', sans-serif;
             font-size: 3.5rem;
-            color: var(--gold);
-            text-transform: uppercase;
-            margin-bottom: 30px;
-            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
-        }
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 40px;
-            line-height: 1.8;
-            color: #ccc;
-        }
-        .btn-start {
-            background: var(--gold);
-            color: var(--black);
-            padding: 20px 50px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: 0.3s;
-            box-shadow: 0 0 30px var(--gold);
+            font-weight: 900;
+            background: linear-gradient(to right, #ffffff, var(--canva-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+            display: block;
+            text-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
 
-        /* Services Sections */
-        .service-container {
-            padding: 50px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 100px;
-        }
-        .service-card {
-            text-align: center;
-            max-width: 600px;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            transition: 0.5s;
-        }
-        .service-card:hover { transform: translateY(-10px); border-color: var(--gold); }
-        .service-card img {
-            width: 250px;
-            height: auto;
-            margin-bottom: 30px;
-            filter: drop-shadow(0 10px 20px rgba(212, 175, 55, 0.4));
-        }
-        .service-card h2 { color: var(--gold); font-size: 2.2rem; margin-bottom: 15px; }
-        .service-card p { font-size: 1.3rem; line-height: 1.6; color: #eee; }
-
-        /* Footer */
-        footer {
-            padding: 50px 20px;
-            background: #000;
-            border-top: 1px solid var(--gold);
-            text-align: center;
-        }
-        .footer-links {
+        /* الشعارات الثلاثة العلوية */
+        .top-logos-container {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin-top: 20px;
-            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
         }
-        .footer-links a { color: var(--gold); text-decoration: none; font-size: 1rem; }
+
+        .sub-logo {
+            border: 2px solid var(--primary-gold);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary-gold);
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-decoration: underline;
+        }
+
+        /* شبكة المميزات (9 مميزات) */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--canva-blue);
+            box-shadow: 0 15px 30px rgba(0, 196, 204, 0.2);
+        }
+
+        .feature-card h3 {
+            color: var(--canva-blue);
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+
+        /* أيقونات أسفل المنصة */
+        .footer-icons {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 60px;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 30px;
+        }
+
+        .icon-box {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .icon-box span {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .icon-box p {
+            font-weight: bold;
+            color: var(--primary-gold);
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            color: #777;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logos">
-            <img src="https://cdn-icons-png.flaticon.com/512/1055/1055644.png" alt="Logo">
-            <img src="https://cdn-icons-png.flaticon.com/512/1055/1055644.png" alt="Logo">
-            <img src="https://cdn-icons-png.flaticon.com/512/1055/1055644.png" alt="Logo">
+        <div class="company-logo-main">Apex AZM Global</div>
+        <div class="top-logos-container">
+            <div class="sub-logo">Apex AZM - Tech</div>
+            <div class="sub-logo">Apex AZM - Creative</div>
+            <div class="sub-logo">Apex AZM - Future</div>
         </div>
-        <div class="menu-icon">☰</div>
     </header>
 
-    <section class="hero">
-        <h1>Apex AZM Global: Step Into Your Future</h1>
-        <p>مرحباً بك في صرح السيادة الرقمية والهندسة النخبوية. نحن لا نبني مجرد منصات، بل نشيد إمبراطوريات معرفية متكاملة تعمل بذكاء اصطناعي خارق وتصميمات بدقة 4K تليق بطموحك العالمي.</p>
-        <button class="btn-start">ابدأ رحلة التطور مجاناً</button>
-    </section>
+    <div class="container">
+        <h2 class="section-title">منصتنا المتكاملة: 9 مميزات لا تضاهى</h2>
 
-    <div class="service-container">
-        <div class="service-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/3389/3389081.png" alt="Books">
-            <h2>متجر الكتب الذكي (AI E-Book Store)</h2>
-            <p>استكشف ملايين العناوين المولدة بالذكاء الاصطناعي مع صفحات ديناميكية تتكيف مع احتياجاتك. نحن نقدم لك المعرفة مغلفة في قوالب فاخرة وتجربة تصفح سريعة وسلسة تشبه Shopify.</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>1. متجر الكتب الذكي</h3>
+                <p>عناوين مولدة بالذكاء الاصطناعي مع صفحات ديناميكية تتكيف مع احتياجاتك في قوالب فاخرة.</p>
+            </div>
+            <div class="feature-card">
+                <h3>2. بناء السيرة الذاتية الذكية</h3>
+                <p>سير ذاتية محسنة لأنظمة ATS العالمية تظهر بشكل ثلاثي الأبعاد مع محاكي مقابلات مدمج.</p>
+            </div>
+            <div class="feature-card">
+                <h3>3. الإهداءات والبطاقات الذكية</h3>
+                <p>تجربة ملكية مصنوعة من الجلد والذهب الافتراضي، تطلق هولوغرام مجسم ورسائل فيديو عند المسح.</p>
+            </div>
+            <div class="feature-card">
+                <h3>4. ركن التخصيص الفائق</h3>
+                <p>تحويل أفكارك إلى منتجات رقمية فورية بلمسة واحدة، مع دعم فني يعمل بالذكاء الاصطناعي 24/7.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>5. مختبر الابتكار التفاعلي</h3>
+                <p>مساحة عمل تمكنك من تجربة أدوات البرمجة بدون كود وتوليد تطبيقات مصغرة لمشروعك خلال ثوانٍ.</p>
+            </div>
+            <div class="feature-card">
+                <h3>6. المحفظة الرقمية المشفرة</h3>
+                <p>نظام حماية عالي الدقة لتأمين مشترياتك وكتبك الرقمية بتقنية البلوكشين لضمان الملكية الأبدية.</p>
+            </div>
+            <div class="feature-card">
+                <h3>7. المساعد الافتراضي "عزم"</h3>
+                <p>ذكاء اصطناعي خاص بمنصتنا يحلل سلوكك ليرشح لك الكتب والقوالب التي تسرع من نجاحك المهني.</p>
+            </div>
+            <div class="feature-card">
+                <h3>8. بيئة التعلم الغامرة</h3>
+                <p>تحويل الكتب التعليمية إلى تجارب تفاعلية تحتوي على اختبارات حية وشهادات موثقة فور الانتهاء.</p>
+            </div>
+            <div class="feature-card">
+                <h3>9. التصدير المتعدد المنصات</h3>
+                <p>إمكانية ربط أعمالك وسيرتك الذاتية مباشرة بمنصات التوظيف والمتاجر العالمية بضغطة زر.</p>
+            </div>
         </div>
 
-        <div class="service-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="CV Builder">
-            <h2>بناء السيرة الذاتية الذكية</h2>
-            <p>سير ذاتية محسنة لأنظمة ATS العالمية. القالب يظهر بشكل ثلاثي الأبعاد وكأنه ملموس، مع محاكي مقابلات مدمج يعمل بـ Gemini لتدريبك على النجاح والوصول إلى القمة الوظيفية.</p>
-        </div>
-
-        <div class="service-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/1139/1139982.png" alt="Smart Gifting">
-            <h2>الإهداءات والبطاقات الذكية</h2>
-            <p>ارتقِ بتجربة الإهداء إلى مستوى عالمي. كرت إهداء ملكي مصنوع من الجلد الأسود والذهب، يطلق هولوغرام مجسم لتاج تخرج وورود عند المسح. رسائل فيديو وصوت ذكاء اصطناعي تخلق ذكرى لا تُنسى.</p>
+        <div class="footer-icons">
+            <div class="icon-box">
+                <span>🎯</span>
+                <p>الدقة المتناهية</p>
+            </div>
+            <div class="icon-box">
+                <span>⚡</span>
+                <p>السرعة الفائقة</p>
+            </div>
+            <div class="icon-box">
+                <span>🏆</span>
+                <p>الاحترافية العالمية</p>
+            </div>
+            <div class="icon-box">
+                <span>🔄</span>
+                <p>التطوير المستمر</p>
+            </div>
+            <div class="icon-box">
+                <span>🛡️</span>
+                <p>الأمانة والموثوقية</p>
+            </div>
         </div>
     </div>
 
     <footer>
-        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055644.png" style="width:50px; filter: grayscale(1);" alt="Small Logo">
         <p>© 2026 Apex AZM Global. جميع الحقوق محفوظة.</p>
-        <div class="footer-links">
-            <a href="#">فريق البرمجة والتطوير</a>
-            <a href="#">مركز المساعدة</a>
-            <a href="#">الاستفسارات والدعم</a>
-        </div>
+        <p>مصمم بأعلى معايير الدقة والاحترافية</p>
     </footer>
 
 </body>
-  </html>
-  
+</html>
